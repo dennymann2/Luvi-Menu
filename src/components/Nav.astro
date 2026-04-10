@@ -31,7 +31,16 @@ const firstKey = sectionKeys[0];
 ---
 
 <nav class="nav-wrap" id="nav-wrap" aria-label="Menükategorien">
-  {Object.entries(groups).map(([groupName, tabs]) => (
+  <div class="search-wrap">
+    <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input class="search-input" id="search-input" type="text" placeholder="Suche..." autocomplete="off" />
+    <button class="search-clear hidden" id="search-clear" type="button" aria-label="Suche leeren">&times;</button>
+    <button class="search-all" id="search-all" type="button" aria-label="Alles anzeigen" title="Alles anzeigen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+    </button>
+  </div>
+
+  {Object.entries(groups).map(([groupName, tabs], gi) => (
     <div class="nav-row" role="tablist" aria-label={groupName}>
       <span class="nav-label">{groupName}</span>
       <div class="nav-scroll">
