@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
   const navWrap = document.getElementById('nav-wrap');
   const buttons = document.querySelectorAll('.nav-chip[data-tab]');
   const sections = document.querySelectorAll('.section');
@@ -197,4 +197,10 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(sentinel);
     }
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
