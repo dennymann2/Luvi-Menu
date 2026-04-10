@@ -197,6 +197,7 @@ function init() {
       observer.observe(sentinel);
     }
   }
+
 }
 
 if (document.readyState === 'loading') {
