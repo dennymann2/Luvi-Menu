@@ -176,8 +176,8 @@
         { "name": "Three Sixty Vodka", "price": 89, "desc": "0,75l" }
       ]},
       { "category": "Premium", "items": [
-        { "name": "Chivas", "price": 120, "desc": "0,7l" },
         { "name": "Grey Goose", "price": 110, "desc": "0,7l" },
+        { "name": "Chivas", "price": 120, "desc": "0,7l" },
         { "name": "Moët Ice", "price": 150, "allergens": "12" }
       ]}
     ]
